@@ -9,7 +9,7 @@ from there with `make dev` rather than starting this on its own.
 ## How the operator is resolved
 
 The hostname decides which campsite a visitor is looking at —
-`storsand.localhost:3300` in development. `src/lib/tenant/host.ts` is the only
+`storsand.bokarn.localhost` in development. `src/lib/tenant/host.ts` is the only
 place that mapping happens: a header or a query parameter would be
 attacker-controlled, and the API refuses those anyway.
 
@@ -21,12 +21,12 @@ serving someone else's inventory.
 
 ```sh
 bun install
-bun run dev        # http://storsand.localhost:3300/sv
+bun run dev        # http://storsand.bokarn.localhost/sv
 ```
 
-Needs the API on :1437. Locales are `sv`, `en` and `de`; an unprefixed path
-redirects to the default so a shared link always carries the language it was
-read in.
+Needs the API at `http://api.bokarn.localhost`. Locales are `sv`, `en` and
+`de`; an unprefixed path redirects to the default so a shared link always
+carries the language it was read in.
 
 After every change: `bun run format` → `bun run lint` → `bun run typecheck` →
 `bun run build`, all clean.
