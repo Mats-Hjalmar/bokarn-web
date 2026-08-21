@@ -6,7 +6,7 @@ import { defaultLocale, isLocale } from '@/lib/i18n'
  * the default locale rather than served an unlabelled page, so a shared link
  * always carries the language it was read in.
  */
-export function middleware(request: NextRequest) {
+export function proxy(request: NextRequest) {
   const { pathname } = request.nextUrl
   const first = pathname.split('/')[1]
   if (isLocale(first)) return NextResponse.next()
