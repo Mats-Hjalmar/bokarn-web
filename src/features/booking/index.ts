@@ -10,7 +10,6 @@ export { PriceTable } from './components/price-table'
 export { SearchForm } from './components/search-form'
 export { StaySummary } from './components/stay-summary'
 export {
-  emptyStay,
   stayFromParams,
   stayToParams,
   type Availability,

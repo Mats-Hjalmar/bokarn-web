@@ -134,16 +134,6 @@ export type StayQuery = {
   accessible: boolean
 }
 
-export const emptyStay = (): StayQuery => ({
-  arrival: '',
-  departure: '',
-  adults: 2,
-  children: [],
-  pets: 0,
-  electricityAmp: 0,
-  accessible: false,
-})
-
 /**
  * The stay travels through the URL rather than through a store, so a guest can
  * bookmark a search, open two in tabs, and press back without the page and the
